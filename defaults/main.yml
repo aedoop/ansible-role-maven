@@ -1,0 +1,13 @@
+---
+# defaults file for maven
+
+package_name: maven
+package_version: "3.5.0"
+check_version_command: mvn -v
+
+# user: jdk
+# group: jdk
+
+os_family: linux
+# push or pull
+install_mode: push

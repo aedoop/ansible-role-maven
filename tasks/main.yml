@@ -1,0 +1,10 @@
+---
+# tasks file for maven
+
+- name: Set os_family fact
+  set_fact:
+    os_family: window
+  when: ansible_os_family=="Windows"
+
+- name: Install {{ package_name }} for {{ os_family }}
+  include: "{{ os_family }}.yml"

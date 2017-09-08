@@ -1,0 +1,9 @@
+---
+
+- include: package-common.yml
+
+- name: Copy over the pre-downloaded package and unarchive it for linux
+  unarchive: src={{ pkg_other_info.push }} dest={{ pkg_other_info.install_dir }} copy=yes
+
+- name: Do common something for linux
+  include: linux-common.yml
