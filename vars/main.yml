@@ -13,10 +13,9 @@ maven_packages:
       download_dir: /tmp
       push: apache-maven-3.5.0-bin.tar.gz
       pull: ftp://10.0.250.100/pub/maven/linux/apache-maven-3.5.0-bin.tar.gz
-    # window:
-    #   64-bit:
-    #     file: jdk-8u144-windows-x64.exe
-    #     install_dir: C:\Program Files\Java
-    #     download_dir: C:\tmp
-    #     push: jdk-8u144-windows-x64.exe
-    #     pull: ftp://10.0.250.100/pub/jdk/window/jdk-8u144-windows-x64.exe
+    window:
+      file: apache-maven-3.5.0-bin.zip
+      install_dir: C:\Program Files\Maven
+      download_dir: C:\tmp
+      push: apache-maven-3.5.0-bin.zip
+      pull: ftp://10.0.250.100/pub/maven/window/apache-maven-3.5.0-bin.zip

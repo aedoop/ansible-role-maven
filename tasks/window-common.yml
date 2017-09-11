@@ -1,0 +1,12 @@
+---
+
+- name: Set the MAVEN_HOME environment
+  win_path:
+    name: MAVEN_HOME
+    elements: "{{ pkg_other_info.install_dir }}\\{{ pkg_info.dir }}"
+
+- name: Set the Path environment
+  win_path: elements="{{ pkg_other_info.install_dir }}\\{{ pkg_info.dir }}\\bin"
+
+- name: Remove install package
+  win_file: path={{ pkg_other_info.download_dir }}/{{ pkg_other_info.file }} state=absent

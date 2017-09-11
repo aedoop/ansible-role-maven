@@ -1,0 +1,23 @@
+---
+
+- include: package-common.yml
+
+- name: Check and create install and temp directory for window
+  win_file: path={{ item }} state=directory
+  with_items:
+    - "{{ pkg_other_info.install_dir }}"
+    - "{{ pkg_other_info.download_dir }}"
+
+
+- name: Copy a install package for window
+  win_copy: src={{ pkg_other_info.push }} dest={{ pkg_other_info.download_dir }}
+
+- name: Unzip a install package
+  win_unzip: 
+    src: "{{ pkg_other_info.download_dir }}/{{ pkg_other_info.file }}" 
+    dest: "{{ pkg_other_info.install_dir }}"
+    recurse: yes
+    delete_archive: yes
+
+- name: Do common something for window
+  include: window-common.yml
