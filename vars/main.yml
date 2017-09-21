@@ -14,8 +14,8 @@ maven_packages:
       push: apache-maven-3.5.0-bin.tar.gz
       pull: ftp://10.0.250.100/pub/maven/linux/apache-maven-3.5.0-bin.tar.gz
     window:
-      file: apache-maven-3.5.0-bin.zip
-      install_dir: C:\Program Files\Maven
+      file: maven.install.3.5.0.nupkg
+      # install_dir: C:\Program Files\Maven
       download_dir: C:\tmp
-      push: apache-maven-3.5.0-bin.zip
-      pull: ftp://10.0.250.100/pub/maven/window/apache-maven-3.5.0-bin.zip
+      push: maven.install.3.5.0.nupkg
+      pull: ftp://10.0.250.100/pub/maven/window/maven.install.3.5.0.nupkg

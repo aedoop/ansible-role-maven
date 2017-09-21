@@ -10,4 +10,4 @@ check_version_command: mvn -v
 
 os_family: linux
 # push or pull
-install_mode: push
+install_mode: pull
